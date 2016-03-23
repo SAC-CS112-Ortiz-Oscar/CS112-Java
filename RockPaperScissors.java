@@ -32,3 +32,5 @@ public class RockPaperScissors {
 	}
 
 }
+
+// You ned to generate Computer choice using Random function, Oscar
