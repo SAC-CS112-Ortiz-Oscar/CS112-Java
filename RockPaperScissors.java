@@ -1,44 +1,34 @@
 // Oscar Ortiz
-// Week 4 Homework
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class RockPaperScissors {
-	public static void main( String[] arg)
+
+	public static void main(String[] args) 
 	{
-		Scanner input = new Scanner( System.in );
-		
-		char userAction;
-		
-		System.out.println("Welcome!\n");
-		System.out.println("Use the following commands:");
-		System.out.println("Papper = \"p\"");
-		System.out.println("Rock = \"r\"");
-		System.out.println("Scissors = \"s\"\n");
-		
-		System.out.print("Choose paper, rocks, or scissors: ");
-		userAction = input.next(".").charAt(0);
-		
-		if( userAction == 'r')
+		String rock = "rock";
+		String paper = "paper";
+		String scissors = "scissors";
+		for( int count = 0; count < 3; count++)
 		{
-			System.out.println("You lose!");
-			System.out.println("Computer chose: Paper");
+			String userAction = JOptionPane.showInputDialog("Choose paper, rock, or scissors:");
+		
+			if( new String(userAction).equals(rock))
+			{
+				JOptionPane.showMessageDialog(null, "You loose! \nComputer chose: paper.");
+			}
+		
+			if( new String(userAction).equals(paper))
+			{
+				JOptionPane.showMessageDialog(null, "You loose! \nComputer chose: scissors.");
+			}
+		
+			if( new String(userAction).equals(scissors))
+			{
+				JOptionPane.showMessageDialog(null, "You loose! \nComputer chose: rock.");
+			}
 		}
-		
-		if( userAction == 'p')
-		{
-			System.out.println("You lose!");
-			System.out.println("Computer chose: Scissors");
-		}
-		
-		if( userAction == 's')
-		{
-			System.out.println("You lose!");
-			System.out.println("Computer chose: Rock");
-		}
-		
-		
-		
+	
 	}
 
 }
